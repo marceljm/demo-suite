@@ -1,0 +1,40 @@
+# Local environment and credentials
+.env
+.env.*
+!/.env.example
+.envrc
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python environments, bytecode, and local databases
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.sqlite
+*.sqlite3
+*.db
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Frontend dependencies and generated output
+node_modules/
+build/
+dist/
+.react-router/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Local uploads and tooling output
+media/
+uploads/
+coverage/
+.DS_Store
+*.log

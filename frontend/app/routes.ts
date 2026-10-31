@@ -1,0 +1,21 @@
+import { index, route, type RouteConfig } from '@react-router/dev/routes';
+export default [
+  index('routes/home.tsx'),
+  route('features/', 'routes/features.tsx'),
+  route('features/:slug/', 'routes/feature-detail.tsx'),
+  route('pricing/', 'routes/pricing.tsx'),
+  route('compare/', 'routes/compare.tsx'),
+  route('checkout/', 'routes/checkout.tsx'),
+  route('checkout/demo-confirmation/', 'routes/confirmation.tsx'),
+  route('reviews/', 'routes/reviews.tsx'),
+  route('integrations/', 'routes/integrations.tsx'),
+  route('integrations/:slug/', 'routes/integration-detail.tsx'),
+  route('docs/*', 'routes/docs.tsx'),
+  route('blog/', 'routes/blog.tsx'),
+  route('blog/:slug/', 'routes/blog-detail.tsx'),
+  route('faq/', 'routes/faq.tsx'),
+  route('contact/', 'routes/contact.tsx'),
+  route('privacy/', 'routes/privacy.tsx'),
+  route('terms/', 'routes/terms.tsx'),
+  route('refund-policy/', 'routes/refund-policy.tsx'),
+] satisfies RouteConfig;

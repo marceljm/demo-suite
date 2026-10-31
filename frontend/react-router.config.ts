@@ -1,0 +1,67 @@
+import type { Config } from '@react-router/dev/config';
+const featureSlugs = [
+  'smart-workflows',
+  'live-analytics',
+  'team-workspaces',
+  'automations',
+  'custom-reports',
+  'secure-sharing',
+  'version-history',
+  'priority-support',
+];
+const integrationSlugs = [
+  'cloudnote',
+  'pixelboard',
+  'orbit-mail',
+  'ledgerleaf',
+  'meetly',
+  'codenest',
+];
+const blogSlugs = [
+  'a-calmer-way-to-plan-your-week',
+  'make-project-updates-useful-again',
+  'the-small-rituals-behind-great-teams',
+  'how-to-find-focus-in-a-busy-workspace',
+  'a-practical-guide-to-better-handoffs',
+  'make-space-for-meaningful-work',
+  'building-a-team-rhythm-that-lasts',
+  'the-case-for-visible-progress',
+];
+const docSlugs = [
+  'getting-started',
+  'install-demosuite',
+  'create-your-first-workspace',
+  'invite-your-team',
+  'plan-your-first-project',
+  'set-up-workflows',
+  'build-a-custom-report',
+  'connect-integrations',
+  'manage-permissions',
+  'use-automations',
+  'export-your-data',
+  'billing-and-licenses',
+];
+export default {
+  ssr: true,
+  prerender: async () => [
+    '/',
+    '/features/',
+    ...featureSlugs.map((x) => `/features/${x}/`),
+    '/pricing/',
+    '/compare/',
+    '/checkout/',
+    '/checkout/demo-confirmation/',
+    '/reviews/',
+    '/integrations/',
+    ...integrationSlugs.map((x) => `/integrations/${x}/`),
+    '/docs/',
+    ...docSlugs.map((x) => `/docs/${x}/`),
+    '/blog/',
+    ...blogSlugs.map((x) => `/blog/${x}/`),
+    '/faq/',
+    '/contact/',
+    '/privacy/',
+    '/terms/',
+    '/refund-policy/',
+  ],
+} satisfies Config;
